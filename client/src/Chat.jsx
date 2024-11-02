@@ -5,7 +5,7 @@ import { IoSend } from "react-icons/io5";
 function Chat() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState(null); 
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -43,7 +43,8 @@ function Chat() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault();
+      e.preventDefault()
+      console.log("")
       sendMessage();
     }
   };
@@ -91,7 +92,7 @@ function Chat() {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          onKeyDown={handleKeyDown}
+          onKeyDown={handleKeyDown} 
           placeholder="Nhấn vào đây để chat"
           className="flex-1 p-2 border rounded-full outline-none mr-2"
         />
